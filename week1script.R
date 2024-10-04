@@ -4,8 +4,9 @@ library(haven)
 #import data, assign dataframe to "nfhs"
 nfhs <- read_dta("IAHR52FL.dta")
 
-#subset the data into a smaller, manageable df to work with
-#this example looks at rural and urban households
+#this project will look at households with children under the age of 6 
+#it will compare the households with or without electricity
+
 df_rural <- nfhs %>%
   select(hhid:hv208) %>%
   rename(survey_month = hv006) %>%
